@@ -1,9 +1,10 @@
-// insert sort.cpp : 定义控制台应用程序的入口点。
+// insert sort.cpp : 锟斤拷锟斤拷锟斤拷锟斤拷台应锟矫筹拷锟斤拷锟斤拷锟斤拷锟节点。
 //
 
 #include "stdafx.h"
 #define N 8
 void insertsort(int a[], int n);
+void insertionsort(int a[],int n);
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -26,4 +27,15 @@ void insertsort(int a[], int n){
 		}
 		a[j + 1] = k;
 	}
+}
+void insertionsort(int a[],int n){
+    for(int i=1;i<n;i++){
+        int k=a[i];
+        int j=i-1;
+        while(j>=0&a[j]<k){
+            a[j+1]=a[j];
+            j--;
+        }
+        a[j+1]=k;
+    }
 }
