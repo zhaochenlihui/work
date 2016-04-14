@@ -38,7 +38,8 @@ int * countsort(int a[], int k,int d[]){
 	k = 9;
 	for (int i = 0; i <N; i++){
 		c[a[i]] = c[a[i]] + 1;
-	}for (int i = 1; i < k + 1; i++){
+	}
+    for (int i = 1; i < k + 1; i++){
 		c[i] = c[i] + c[i - 1];
 	}
 	int b[N] = { 0 };
